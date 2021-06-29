@@ -17,19 +17,197 @@ class App extends Component {
       "questions": [
         {
           "id": 1,
-          "question": "What is 2 + 2?",
+          "question": "What are the benefits of accessibility for our clients?",
           "answers": [
-            { "answer": "1", "correct": false },
-            { "answer": "2", "correct": false },
-            { "answer": "3", "correct": false },
-            { "answer": "4", "correct": true },
+            { "answer": "Accessibility empowers people with permanent disabilities.", "correct": false },
+            { "answer": "Accessibility supports all people when they experience temporary and situational disabilities.", "correct": false },
+            { "answer": "Accessibility improves user experience for people with poor internet access.", "correct": false },
+            { "answer": "Accessibility improves people's lives as they age.", "correct": false },
+            { "answer": "Accessibility streamlines user experience for everyone!", "correct": false },
+            { "answer": "All of the above", "correct": true },
           ],
           "points": 50
         },
         {
           "id": 2,
-          "question": "Another question",
+          "question": "What are the benefits of accessibility for our organization?",
           "answers": [
+            { "answer": "Accessibility helps us do the right thing for every client, every time!", "correct": false },
+            { "answer": "Accessibility improves Public Perception of our organization.", "correct": false },
+            { "answer": "Accessibility increases compatibility of our products.", "correct": false },
+            { "answer": "Accessibility improves Search Engine Optimization.", "correct": false },
+            { "answer": "Accessibility increases our reach and customer base.", "correct": false },
+            { "answer": "Accessibility Increases Our Eligibility for Funding.", "correct": false },
+            { "answer": "Accessibility helps us Avoid Lawsuits.", "correct": false },
+            { "answer": "All of the above", "correct": true },
+          ],
+          "points": 50
+        },
+        {
+          "id": 3,
+          "question": "What are the benefits of accessibility for our team members?",
+          "answers": [
+            { "answer": "Accessibility empowers diverse talent.", "correct": false },
+            { "answer": "Accessibility improves team member productivity.", "correct": false },
+            { "answer": "Accessibility helps accommodate to the needs of different learning types.", "correct": false },
+            { "answer": "Accessibility makes learning tools and environments more inclusive.", "correct": false },
+            { "answer": "All of the above", "correct": true },
+          ],
+          "points": 50
+        },
+        {
+          "id": 4,
+          "question": "What percentage of the population has a permanent disability?",
+          "answers": [
+            { "answer": "5%", "correct": false },
+            { "answer": "10%", "correct": false },
+            { "answer": "15%", "correct": false },
+            { "answer": "20%", "correct": true },
+          ],
+          "points": 50
+        },
+        {
+          "id": 5,
+          "question": "True or False: Glasses, contacts and screen readers are considered assistive technology.",
+          "answers": [
+            { "answer": "True", "correct": true },
+            { "answer": "False", "correct": false },
+          ],
+          "points": 50
+        },
+        {
+          "id": 6,
+          "question": "What are the four principles of web accessibility?",
+          "answers": [
+            { "answer": "Perfect, Outstanding, UX-proof and Radically new.", "correct": false },
+            { "answer": "Has a great look and feel, Has smooth scrolling, Has readable text and Does not have too many objects inside the viewport", "correct": false },
+            { "answer": "Perceivable, Operable, Understandable and Robust", "correct": true },
+            { "answer": "Programmatically correct, Ordered, Usable and Readable", "correct": false },
+          ],
+          "points": 50
+        },
+        {
+          "id": 7,
+          "question": "Which statement is true?",
+          "answers": [
+            { "answer": "For people with disabilities, the Internet is an obstacle that cannot be overcome even with assistive technology.", "correct": false },
+            { "answer": "The term “assistive technology” applies only to computer use and Internet access.", "correct": false },
+            { "answer": "The Internet is an important part of the solution for disability access.", "correct": true },
+            { "answer": "Making a website accessible to people with disabilities makes it less accessible for other users.", "correct": false },
+          ],
+          "points": 50
+        },
+        {
+          "id": 8,
+          "question": "Who uses assistive technology?",
+          "answers": [
+            { "answer": "People who wear glasses or contact lenses", "correct": false },
+            { "answer": "People who wear hearing aids", "correct": false },
+            { "answer": "People with motor disabilities", "correct": false },
+            { "answer": "All of the above", "correct": true },
+          ],
+          "points": 50
+        },
+        {
+          "id": 9,
+          "question": "True or False: There are many forms of disabilities that are not obvious to an observer.",
+          "answers": [
+            { "answer": "True", "correct": true },
+            { "answer": "False", "correct": false },
+          ],
+          "points": 50
+        },
+        {
+          "id": 10,
+          "question": "Universal Design for the Web is meant to produce websites accessible for:",
+          "answers": [
+            { "answer": "Older people", "correct": false },
+            { "answer": "People without disabilities", "correct": false },
+            { "answer": "People with disabilities", "correct": false },
+            { "answer": "All of the above", "correct": true },
+          ],
+          "points": 50
+        },
+        {
+          "id": 11,
+          "question": "Which of the following is an example of good link text?",
+          "answers": [
+            { "answer": "Click Here", "correct": false },
+            { "answer": "Read More...", "correct": false },
+            { "answer": "Products and Services", "correct": true },
+          ],
+          "points": 50
+        },
+        {
+          "id": 12,
+          "question": "Using meaningful link text is important because:",
+          "answers": [
+            { "answer": "Poorly labeled link text will take users to the wrong page.", "correct": false },
+            { "answer": "Poorly labeled links won’t be clickable.", "correct": false },
+            { "answer": "When screen reader users hear poor link text out of context they won’t know where the link goes.", "correct": true },
+          ],
+          "points": 50
+        },
+        {
+          "id": 13,
+          "question": "Which is NOT an example of a way to make audio accessible to a deaf person?",
+          "answers": [
+            { "answer": "Audio Descriptions", "correct": false },
+            { "answer": "Captions", "correct": false },
+            { "answer": "Color Coding", "correct": true },
+            { "answer": "Transcripts", "correct": false },
+          ],
+          "points": 50
+        },
+        {
+          "id": 14,
+          "question": "True or False: Good Alternative Text makes images accessible to a blind person.",
+          "answers": [
+            { "answer": "True", "correct": true },
+            { "answer": "False", "correct": false },
+          ],
+          "points": 50
+        },
+        {
+          "id": 15,
+          "question": "What version of web accessibility guidelines is referenced in Spark Design System?",
+          "answers": [
+            { "answer": "WCAG 1.1, Level A", "correct": false },
+            { "answer": "WCAG 2.1, Level AA", "correct": true },
+            { "answer": "WCAG 2.2, Level AAA", "correct": false },
+            { "answer": "WCAG3.0", "correct": false },
+          ],
+          "points": 50
+        },
+        {
+          "id": 16,
+          "question": "What is NOT one of the main accessibility principles?",
+          "answers": [
+            { "answer": "Operable", "correct": false },
+            { "answer": "Robust", "correct": false },
+            { "answer": "Perceivable", "correct": false },
+            { "answer": "Repeatable", "correct": true },
+            { "answer": "Understandable", "correct": false },
+          ],
+          "points": 50
+        },
+        {
+          "id": 17,
+          "question": "ARIA means:",
+          "answers": [
+            { "answer": "Accessible Rich Internet Architecture", "correct": false },
+            { "answer": "Accessible Rich Internet Access", "correct": false },
+            { "answer": "Accessible Rich Internet Applications", "correct": true },
+            { "answer": "Accessible Right Internet Application", "correct": false },
+          ],
+          "points": 50
+        },
+        {
+          "id": 18,
+          "question": "True or False: Links must be visually distinguishable from the surrounding non-link text.",
+          "answers": [
+            { "answer": "True", "correct": true },
+            { "answer": "False", "correct": false },
           ],
           "points": 50
         },
@@ -121,6 +299,7 @@ class App extends Component {
         {gameInProgress &&
           <div>
             <p>{currentQuestion.question}</p>
+
             {currentQuestion.answers[0] &&
               <SprkButton onClick={() => { this.answerQuestion(currentQuestion.id, currentQuestion.answers[0]) }}> {currentQuestion.answers[0].answer}</SprkButton>
             }
@@ -134,6 +313,22 @@ class App extends Component {
 
             {currentQuestion.answers[3] &&
               <SprkButton onClick={() => { this.answerQuestion(currentQuestion.id, currentQuestion.answers[3]) }}> {currentQuestion.answers[3].answer}</SprkButton>
+            }
+
+            {currentQuestion.answers[4] &&
+              <SprkButton onClick={() => { this.answerQuestion(currentQuestion.id, currentQuestion.answers[4]) }}> {currentQuestion.answers[4].answer}</SprkButton>
+            }
+
+            {currentQuestion.answers[5] &&
+              <SprkButton onClick={() => { this.answerQuestion(currentQuestion.id, currentQuestion.answers[5]) }}> {currentQuestion.answers[5].answer}</SprkButton>
+            }
+
+            {currentQuestion.answers[6] &&
+              <SprkButton onClick={() => { this.answerQuestion(currentQuestion.id, currentQuestion.answers[6]) }}> {currentQuestion.answers[6].answer}</SprkButton>
+            }
+
+            {currentQuestion.answers[7] &&
+              <SprkButton onClick={() => { this.answerQuestion(currentQuestion.id, currentQuestion.answers[7]) }}> {currentQuestion.answers[7].answer}</SprkButton>
             }
 
             <div>
