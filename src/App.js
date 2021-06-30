@@ -218,14 +218,14 @@ class App extends Component {
     this.answerQuestion = this.answerQuestion.bind(this);
     this.getNextQuestion = this.getNextQuestion.bind(this);
     this.finishGame = this.finishGame.bind(this);
-    
-   
+
+
   }
 
   startGame() {
     var randomNum = Math.floor(Math.random() * 18);
     this.setState({
-     
+
       "unansweredQuestions": this.state.questions,
       "currentQuestion": this.state.questions[randomNum], // this should be chosen randomly
       "gameInProgress": true,
@@ -237,7 +237,7 @@ class App extends Component {
     if (answer.correct) {
       this.setState({ "score": this.state.score + 50 }) // get the correct point value from state
       // move that question to answeredQuestions
-       // console.log("unansweredQuestions");
+      // console.log("unansweredQuestions");
       // update the house
 
       this.setState({ "currentQuestion": this.state.questions[randomNum] }); // this should be chosen randomly
@@ -268,18 +268,31 @@ class App extends Component {
       gameEnded,
       currentQuestion,
       score,
-      
     } = this.state;
 
     /**
      * As the player score goes up, different CSS classes are applied to the app.
      * We can use this to apply different background images for higher scores.
      */
+    // const appClassNames = classNames({
+    //   "App": true,
+    //   "bg_level_1": score > 25,
+    //   "bg_level_2": score > 50,
+    //   // etc
+    // });
+
     const appClassNames = classNames({
       "App": true,
-      "bg_level_1": score > 25,
-      "bg_level_2": score > 50,
-      // etc
+      "bg_level_1": gameInProgress,
+      "bg_title": !gameInProgress && !gameEnded,
+      "bg_game_over": gameEnded,
+    });
+
+    const houseClassNames = classNames({
+      "House": true,
+      "house_progress_1": score > 25,
+      "house_progress_2": score > 50,
+      "house_progress_3": score > 75,
     });
 
     return (
@@ -304,47 +317,49 @@ class App extends Component {
 
 
         {gameInProgress &&
-          <div>
-            <p>{currentQuestion.question}</p>
-
-            {currentQuestion.answers[0] &&
-              <SprkButton onClick={() => { this.answerQuestion(currentQuestion.id, currentQuestion.answers[0]) }}> {currentQuestion.answers[0].answer}</SprkButton>
-            }
-            {currentQuestion.answers[1] &&
-              <SprkButton onClick={() => { this.answerQuestion(currentQuestion.id, currentQuestion.answers[1]) }}> {currentQuestion.answers[1].answer}</SprkButton>
-            }
-
-            {currentQuestion.answers[2] &&
-              <SprkButton onClick={() => { this.answerQuestion(currentQuestion.id, currentQuestion.answers[2]) }}> {currentQuestion.answers[2].answer}</SprkButton>
-            }
-
-            {currentQuestion.answers[3] &&
-              <SprkButton onClick={() => { this.answerQuestion(currentQuestion.id, currentQuestion.answers[3]) }}> {currentQuestion.answers[3].answer}</SprkButton>
-            }
-
-            {currentQuestion.answers[4] &&
-              <SprkButton onClick={() => { this.answerQuestion(currentQuestion.id, currentQuestion.answers[4]) }}> {currentQuestion.answers[4].answer}</SprkButton>
-            }
-
-            {currentQuestion.answers[5] &&
-              <SprkButton onClick={() => { this.answerQuestion(currentQuestion.id, currentQuestion.answers[5]) }}> {currentQuestion.answers[5].answer}</SprkButton>
-            }
-
-            {currentQuestion.answers[6] &&
-              <SprkButton onClick={() => { this.answerQuestion(currentQuestion.id, currentQuestion.answers[6]) }}> {currentQuestion.answers[6].answer}</SprkButton>
-            }
-
-            {currentQuestion.answers[7] &&
-              <SprkButton onClick={() => { this.answerQuestion(currentQuestion.id, currentQuestion.answers[7]) }}> {currentQuestion.answers[7].answer}</SprkButton>
-            }
+          <>
+            <div className={houseClassNames}>House</div>
 
             <div>
-              <SprkButton onClick={this.finishGame}>End the game</SprkButton>
+              <p>{currentQuestion.question}</p>
+
+              {currentQuestion.answers[0] &&
+                <SprkButton onClick={() => { this.answerQuestion(currentQuestion.id, currentQuestion.answers[0]) }}> {currentQuestion.answers[0].answer}</SprkButton>
+              }
+              {currentQuestion.answers[1] &&
+                <SprkButton onClick={() => { this.answerQuestion(currentQuestion.id, currentQuestion.answers[1]) }}> {currentQuestion.answers[1].answer}</SprkButton>
+              }
+
+              {currentQuestion.answers[2] &&
+                <SprkButton onClick={() => { this.answerQuestion(currentQuestion.id, currentQuestion.answers[2]) }}> {currentQuestion.answers[2].answer}</SprkButton>
+              }
+
+              {currentQuestion.answers[3] &&
+                <SprkButton onClick={() => { this.answerQuestion(currentQuestion.id, currentQuestion.answers[3]) }}> {currentQuestion.answers[3].answer}</SprkButton>
+              }
+
+              {currentQuestion.answers[4] &&
+                <SprkButton onClick={() => { this.answerQuestion(currentQuestion.id, currentQuestion.answers[4]) }}> {currentQuestion.answers[4].answer}</SprkButton>
+              }
+
+              {currentQuestion.answers[5] &&
+                <SprkButton onClick={() => { this.answerQuestion(currentQuestion.id, currentQuestion.answers[5]) }}> {currentQuestion.answers[5].answer}</SprkButton>
+              }
+
+              {currentQuestion.answers[6] &&
+                <SprkButton onClick={() => { this.answerQuestion(currentQuestion.id, currentQuestion.answers[6]) }}> {currentQuestion.answers[6].answer}</SprkButton>
+              }
+
+              {currentQuestion.answers[7] &&
+                <SprkButton onClick={() => { this.answerQuestion(currentQuestion.id, currentQuestion.answers[7]) }}> {currentQuestion.answers[7].answer}</SprkButton>
+              }
+
+              <div>
+                <SprkButton onClick={this.finishGame}>End the game</SprkButton>
+              </div>
             </div>
-          </div>
+          </>
         }
-
-
 
         {gameEnded &&
           <div>

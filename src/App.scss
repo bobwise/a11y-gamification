@@ -2,8 +2,36 @@
 
 .App {
   text-align: center;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+.bg_title {
+  background: url('./assets/placeholder_bg_1.jpeg');
+  background-size: cover;
 }
 
 .bg_level_1 {
-  background-color: hotpink;
+  background: url('./assets/placeholder_bg_2.jpeg');
+  background-size: cover;
+}
+
+.bg_game_over {
+  background: url('./assets/placeholder_bg_3.jpeg');
+  background-size: cover;
+}
+
+.House {
+  background: url('./assets/Asset 9.png');
+  background-size: cover;
+  margin: 0 auto;
+
+  height: 100px;
+  width: 100px;
+}
+
+.house_progress_1 {
+  background: url('./assets/Asset 10.png');
+  background-size: cover;
 }
