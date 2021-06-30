@@ -233,13 +233,14 @@ class App extends Component {
   }
 
   answerQuestion(questionId, answer) {
+    var randomNum = Math.floor(Math.random() * 18);
     if (answer.correct) {
       this.setState({ "score": this.state.score + 50 }) // get the correct point value from state
       // move that question to answeredQuestions
-      //answeredQuestions[questionId.id.question];
+       // console.log("unansweredQuestions");
       // update the house
 
-      this.setState({ "currentQuestion": this.state.questions[0] }); // this should be chosen randomly
+      this.setState({ "currentQuestion": this.state.questions[randomNum] }); // this should be chosen randomly
     } else {
       // shuffle that question back into the deck
       // update the score and house?
