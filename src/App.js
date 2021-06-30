@@ -218,12 +218,16 @@ class App extends Component {
     this.answerQuestion = this.answerQuestion.bind(this);
     this.getNextQuestion = this.getNextQuestion.bind(this);
     this.finishGame = this.finishGame.bind(this);
+    
+   
   }
 
   startGame() {
+    var randomNum = Math.floor(Math.random() * 18);
     this.setState({
+     
       "unansweredQuestions": this.state.questions,
-      "currentQuestion": this.state.questions[0], // this should be chosen randomly
+      "currentQuestion": this.state.questions[randomNum], // this should be chosen randomly
       "gameInProgress": true,
     });
   }
@@ -234,7 +238,7 @@ class App extends Component {
       // move that question to answeredQuestions
       // update the house
 
-      this.setState({ "currentQuestion": this.state.questions[1] }); // this should be chosen randomly
+      this.setState({ "currentQuestion": this.state.questions[0] }); // this should be chosen randomly
     } else {
       // shuffle that question back into the deck
       // update the score and house?
@@ -262,6 +266,7 @@ class App extends Component {
       gameEnded,
       currentQuestion,
       score,
+      
     } = this.state;
 
     /**
