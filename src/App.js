@@ -234,14 +234,13 @@ class App extends Component {
 
   answerQuestion(questionId, answer) {
     var randomNum = Math.floor(Math.random() * 18);
+    const theQuestion = this.state.unansweredQuestions.filter(question => question.questionId === questionId);
     if (answer.correct) {
       this.setState({ "score": this.state.score + 50 }) // get the correct point value from state
       // move that question to answeredQuestions
+      var joined = this.state.answeredQuestions.concat(questionId);
+      this.setState({answeredQuestions: joined})
 
-       for(var i = 0; i < "unansweredQuestions".length; i++)
-       {
-         
-       }
 
       // console.log("unansweredQuestions");
 
@@ -250,6 +249,8 @@ class App extends Component {
       this.setState({ "currentQuestion": this.state.questions[randomNum] }); // this should be chosen randomly
     } else {
       // shuffle that question back into the deck
+      var joined2 = this.state.unansweredQuestions.concat(questionId);
+      this.setState({unansweredQuestions: joined2})
       // update the score and house?
       // go to the next question
     }
