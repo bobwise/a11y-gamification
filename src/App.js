@@ -236,6 +236,7 @@ class App extends Component {
     if (answer.correct) {
       this.setState({ "score": this.state.score + 50 }) // get the correct point value from state
       // move that question to answeredQuestions
+      //answeredQuestions[questionId.id.question];
       // update the house
 
       this.setState({ "currentQuestion": this.state.questions[0] }); // this should be chosen randomly
