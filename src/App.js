@@ -299,6 +299,7 @@ class App extends Component {
 
     return (
       <div className={appClassNames}>
+        
         <SprkHeading
           element="h1"
           variant="displayTwo"
